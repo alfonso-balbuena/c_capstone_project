@@ -1,0 +1,11 @@
+Hero : pacman.data
+Map : map.data
+NumberEnemies : 4
+Enemy : Blinky
+Data : blinky.data
+Enemy : Clyde
+Data : clyde.data
+Enemy : Inky
+Data : inky.data
+Enemy ; Pinky
+data : pinky.data

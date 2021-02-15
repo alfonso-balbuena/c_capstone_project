@@ -1,0 +1,25 @@
+spritesheet : ./img/Pinky.png
+speedX : 2.5
+speedY : 5
+Animation : North
+Frames : 2
+1 0 24 24
+1 26 24 24
+Animation : South
+Frames : 2
+1 52 24 24
+1 78 24 24
+Animation : West
+Frames : 2
+1 104 24 24
+1 130 24 24
+Animation : East
+Frames : 2
+1 156 24 24
+1 182 24 24
+Animation : Vulnerable
+Frames : 4
+27 0 24 24
+27 26 24 24
+27 52 24 24
+27 78 24 24

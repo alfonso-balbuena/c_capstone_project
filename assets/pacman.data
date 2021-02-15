@@ -1,0 +1,36 @@
+spritesheet : ./img/Pacman.png
+speedX : 5
+speedY : 2.5
+Animation : West
+Frames : 3
+0 0 24 24
+0 26 24 24
+0 52 24 24
+Animation : East
+Frames : 3
+26 0 24 24
+26 26 24 24
+26 52 24 24
+Animation : North
+Frames : 3
+52 0 24 24
+52 26 24 24
+52 52 24 24
+Animation : South
+Frames : 3
+78 0 24 24
+78 26 24 24
+78 52 24 24
+Animation : Dead
+Frames : 11
+104 0 24 24
+104 26 24 24
+140 52 24 24
+140 78 24 24
+140 104 24 24
+140 130 24 24
+140 156 24 24
+140 182 24 24
+140 208 24 24
+140 234 24 24
+140 260 24 24
