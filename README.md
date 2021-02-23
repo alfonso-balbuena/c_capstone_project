@@ -1,5 +1,5 @@
 # Pacman
-This game is the capstone project for C++ Nanodegree
+This game is the capstone project for [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213)
 
 ## Dependencies for Running Locally
 * cmake >= 3.12
