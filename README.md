@@ -50,3 +50,44 @@ meanwhile a ghost (Blinky) is trying to capture. However, if a special food is e
 * ***Blinky(Blinky.h)***: An MazeCharacter implementation. He tries to reduce the distance between the hero and himself.
 * ***Namespace PacmanUtils(Utils.h)***: Here, there are the definitions of the constants strings for reading the files, the enum for the type of items in the map, the enum for character states, auxiliary methods for these enums (convert from strings to enum or from enum to string) and finally a collision method for two surfaces.
 
+## Rubric points
+
+* ***The project reads data from a file and process the data, or the program writes data to a file.***
+
+The next classes are constructed by reading a file: Game, Maze(Maze.cpp line 3), Character(Character.cpp line 3).
+Example from Game.cpp (line 3)
+```
+Game::Game(std::string file) : map(nullptr), graphics(nullptr), hero(nullptr) {
+    std::ifstream gameFile(file);
+    std::string line;
+    std::string type;
+    std::string separator;
+    std::string fileInit;
+    while(std::getline(gameFile,line)) {
+        std::istringstream stringStream(line);
+        stringStream >> type >> separator >> fileInit;        
+        if(type.compare(HERO) == 0) {
+            initHero(fileInit);
+        } else if(type.compare(MAP) == 0) {            
+            map.reset(new Maze(fileInit,graphics));
+        }else if(type.compare(ENEMY) == 0) {
+            initEnemy(fileInit);
+        } else if(type.compare(SIZE) == 0) {            
+            graphics.reset(new Graphics(std::stoi(fileInit),std::stoi(separator),"Pacman"));
+        }
+
+    }
+}
+```
+* ***The project accepts user input and processes the input.***: File: Game.cpp (line 106) the method reads the input for the keydown event (SDL2)
+
+* ***The project uses Object Oriented Programming techniques.***: Files: Game.h (line 22), Graphics.h (line 11), Maze.h (line 23), Character.h (line 20), Pacman.h (line 13), MazeCharacter.h (line 17), Blinky.h (line 18) and SpriteAnimation.h (line 12)
+* ***Classes use appropriate access specifiers for class members.***: Files: Files Game.h, Graphics.h, Maze.h, Character.h, Pacman.h, MazeCharacter.h, Blinky.h and SpriteAnimation.h
+* ***Classes abstract implementation details from their interfaces.*** : Files: Files Game.h, Graphics.h, Maze.h, Character.h, Pacman.h, MazeCharacter.h, Blinky.h and SpriteAnimation.h
+* ***Classes encapsulate behavior.***: Files: Files Game.h, Graphics.h, Maze.h, Character.h, Pacman.h, MazeCharacter.h, Blinky.h and SpriteAnimation.h
+*  ***Classes follow an appropriate inheritance hierarchy.***: Files: Character.h(line 27 and 28), MazeCharacter.h (line 40)
+* ***Overloaded functions allow the same function to operate on different parameters.*** Character.h(line 27,28)
+* ***Derived class functions override virtual base class functions.*** Files: Pacman.h(line 17 and 18), MazeCharacter(line 23 y 24), Blinky.h(line 23)
+* ***The project makes use of references in function declarations.*** Files: Util.h (line 65), Maze.h (line 25),Graphics.h (lines 16,17 y 18), Character(lines 23, 31 and 32)
+* ***The project uses destructors appropriately.*** File: Graphics.h (line 15), Graphics.cpp (line 67)
+* ***The project uses smart pointers instead of raw pointers.*** Files: Game.h(lines 34,35,36 and 37), SpriteAnimation.h (line 28), Graphics.h (lines 23 and 24)
