@@ -1,6 +1,7 @@
-spritesheet : ./img/Inky.png
-speedX : 2.5
-speedY : 5
+Type : Inky
+Spritesheet : ./img/Inky.png
+SpeedX : 2.5
+SpeedY : 5
 Animation : North
 Frames : 2
 1 0 24 24

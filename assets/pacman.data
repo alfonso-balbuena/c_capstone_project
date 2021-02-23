@@ -1,6 +1,7 @@
-spritesheet : ./img/Pacman.png
-speedX : 5
-speedY : 2.5
+Type : Pacman
+Spritesheet : ./img/Pacman.png
+SpeedX : 4
+SpeedY : 2
 Animation : West
 Frames : 3
 0 0 24 24

@@ -1,6 +1,7 @@
-spritesheet : ./img/Blinky.png
-speedX : 2.5
-speedY : 5
+Type : Blinky
+Spritesheet : ./img/Blinky.png
+SpeedX : 4
+SpeedY : 2
 Animation : North
 Frames : 2
 1 0 24 24
