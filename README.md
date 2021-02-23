@@ -30,3 +30,23 @@ This game is the capstone project for [Udacity C++ Nanodegree Program](https://w
 4. CMake: `cmake ../ `
 5. Compile: `make`
 6. Run it: `./Pacman`.
+
+## Description
+
+This project is just a part of the Pacman game, the data is loaded from the assets files. The hero (Pacman) go throught the map eating the points that there are in the Map,
+meanwhile a ghost (Blinky) is trying to capture. However, if a special food is eaten, then the ghost is vulnerable and he can be capture for Pacman as a consequence, the ghost will return to the start point.
+
+## Classes
+
+<img src="classes.PNG"/>
+
+* ***Game(Game.h)***: This class is in charge of managing the loop game (e.g. get input, update and draw the elements, collisions between elements and finish the game).
+* ***Maze(Maze.h)***: This class is in charge of manage all the elements on the map (Blocks, Spaces, Food, Fruits).
+* ***Graphics(Graphics.h)***: This class is in charge of managing the SDL2 graphic window system 
+* ***SpriteAnimation(SpriteAnimation.h)***: A container for a sprite sheet image and the frames for every animation. 
+* ***Character(Character.h)***: An abstract class, which is initialized by reading a file, in which is stored information about the speed, the image for showing and the animations (name of animations, number of frames per animation, and the coordinates for every frame).  This class handles and shows the animations. Every animation is drawn as a cyclic animation. Moreover, it has interface methods for updating the character's position.
+* ***Pacman(Pacman.h)***: Class for the hero in this game and is an implementation of the Character class. This class update the position depending on the input of the user. If the hero reaches a wall, it will stop until the user press a valid key.
+*MazeCharacter(MazeCharacter.h): Abstract class for the enemy character, also this is a Character implementation. This class is in charge of moving the enemy over the map based on the current direction. This class provides a pure virtual method for updating the current direction.
+* ***Blinky(Blinky.h)***: An MazeCharacter implementation. He tries to reduce the distance between the hero and himself.
+* ***Namespace PacmanUtils(Utils.h)***: Here, there are the definitions of the constants strings for reading the files, the enum for the type of items in the map, the enum for character states, auxiliary methods for these enums (convert from strings to enum or from enum to string) and finally a collision method for two surfaces.
+
