@@ -1,6 +1,8 @@
 # Pacman
 This game is the capstone project for [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213)
 
+<img src="PacmanGame.PNG"/>
+
 ## Dependencies for Running Locally
 * cmake >= 3.12
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
@@ -34,7 +36,7 @@ This game is the capstone project for [Udacity C++ Nanodegree Program](https://w
 ## Description
 
 This project is just a part of the Pacman game, the data is loaded from the assets files. The hero (Pacman) go throught the map eating the points that there are in the Map,
-meanwhile a ghost (Blinky) is trying to capture. However, if a special food is eaten, then the ghost is vulnerable and he can be capture for Pacman as a consequence, the ghost will return to the start point.
+meanwhile a ghost (Blinky) is trying to capture. However, if a special food is eaten, then the ghost is vulnerable and he can be capture for Pacman as a consequence, the ghost will return to the start point. The user can move the hero with the keys: arrow up,arrow down,arrow left and arrow right. Also the user can finish the game with the q key.
 
 ## Classes
 
